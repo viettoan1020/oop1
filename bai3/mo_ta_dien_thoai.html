@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả đth</title>
+</head>
+<body>
+<script>
+    class Nokia {
+        constructor(battery, inbox, status, turn, message, sent) {
+            this.battery = battery;
+            this.inbox = inbox;
+            this.status = true;
+            this.turn = true;
+            this.message = message;
+            this.sent = sent;
+        }
+        setBattery() {
+            if (this.battery > 15) {
+                alert("Pin:" + " " + this.battery + "%");
+            } else {
+                alert("Pin yeu");
+            }
+            return this.battery;
+        }
+        setInbox() {
+            if (this.inbox > 100) {
+                alert("Het dung luong");
+            }
+            return this.inbox;
+        }
+        setStatus() {
+            if (this.status === false) {
+                alert("Dang hoat dong");
+            } else {
+                alert("An danh");
+            }
+            return this.status;
+        }
+        setSent() {
+            alert("Ban da gui tin nhan");
+            return this.sent;
+        }
+        tunrOn() {
+            alert("Ban da bat");
+            return this.turn;
+        }
+        tunrOff() {
+            alert("Ban da tat");
+            return !this.turn;
+        }
+        setMessage() {
+            return this.message;
+        }
+
+    }
+
+    let operatePhone = new Nokia(50, 120, false, true);
+    function battery() {
+        operatePhone.setBattery();
+    }
+    function inbox() {
+        operatePhone.setInbox();
+    }
+    function status() {
+        operatePhone.setStatus();
+    }
+    function tunrOn() {
+        operatePhone.tunrOn();
+    }
+    function tunrOff() {
+        operatePhone.tunrOff();
+    }
+    function message() {
+        let input = prompt("Soan tin nhan");
+        operatePhone.setMessage(input);
+    }
+    function sent() {
+        operatePhone.setSent();
+    }
+</script>
+</body>
+</html>

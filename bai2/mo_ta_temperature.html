@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô tả temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        doC;
+        constructor(doC) {
+
+            if (doC > -273) {
+                this.doC = doC;
+            }
+        }
+        getdoC() {
+            return this.doC;
+        }
+        setdoC(doC) {
+            this.doC = doC;
+        }
+        getdoK() {
+            return (this.doC + 273.15);
+        }
+        getdoF() {
+            return ((this.doC * 9 / 5) + 32);
+        }
+    }
+    let myTemperature = new Temperature(25);
+    let doC = myTemperature.getdoC();
+    let doK = myTemperature.getdoK();
+    let doF = myTemperature.getdoF();
+    document.write("Độ Celsius: " + doC + "</br>");
+    document.write("Độ Kelvin: " + doK + "</br>");
+    document.write("Độ Fahrenheit: " + doF);
+</script>
+</body>
+</html>
